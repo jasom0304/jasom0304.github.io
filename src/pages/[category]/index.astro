@@ -1,0 +1,11 @@
+---
+import Category from '../../views/Category.astro';
+import { categories } from '../../site';
+
+export function getStaticPaths() {
+  return categories.map((c) => ({ params: { category: c.id } }));
+}
+const { category } = Astro.params;
+---
+
+<Category lang="zh" id={category} />

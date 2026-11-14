@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import { categories, ui, type Lang } from '../site';
+import { getPosts } from '../lib/posts';
+
+interface Props {
+  lang: Lang;
+  id: string;
+}
+const { lang, id } = Astro.props;
+const t = ui[lang];
+const cat = categories.find((c) => c.id === id)!;
+const posts = (await getPosts(lang)).filter((p) => p.category === id);
+---
+
+<Base lang={lang} title={cat[lang].name} description={cat[lang].desc} path={`${id}/`} current={id}>
+  <header class="page-head">
+    <h1>{cat[lang].name}</h1>
+    {id === 'invest' && <p class="notice">{t.disclaimer}</p>}
+  </header>
+  <section class="section">
+    <PostList posts={posts} lang={lang} />
+  </section>
+</Base>

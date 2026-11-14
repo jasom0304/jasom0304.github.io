@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import { ui, type Lang } from '../site';
+import { getPosts } from '../lib/posts';
+
+interface Props {
+  lang: Lang;
+  tag: string;
+}
+const { lang, tag } = Astro.props;
+const t = ui[lang];
+const posts = (await getPosts(lang)).filter((p) => p.tags.includes(tag));
+---
+
+<Base lang={lang} title={t.tagged(tag)} hasAlt={false}>
+  <header class="page-head">
+    <h1>{t.tagged(tag)}</h1>
+    <p>{t.allIn(posts.length)}</p>
+  </header>
+  <section class="section">
+    <PostList posts={posts} lang={lang} showCategory />
+  </section>
+</Base>

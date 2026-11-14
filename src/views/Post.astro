@@ -1,0 +1,59 @@
+---
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Comments from '../components/Comments.astro';
+import { categories, ui, type Lang } from '../site';
+import { href, formatDate } from '../lib/url';
+import { getAllPosts, type Post } from '../lib/posts';
+
+interface Props {
+  lang: Lang;
+  post: Post;
+}
+const { lang, post } = Astro.props;
+const t = ui[lang];
+const cat = categories.find((c) => c.id === post.category);
+const { Content } = await render(post.entry);
+const hasAlt = (await getAllPosts()).some(
+  (p) => p.lang !== lang && p.category === post.category && p.slug === post.slug,
+);
+---
+
+<Base
+  lang={lang}
+  title={post.title}
+  description={post.summary}
+  path={`${post.category}/${post.slug}/`}
+  hasAlt={hasAlt}
+  current={post.category}
+>
+  <article class="article">
+    <header class="article-head">
+      <p class="crumbs">
+        <a href={href(lang, `${post.category}/`)}>{cat?.[lang].name ?? post.category}</a>
+        <time datetime={post.date.toISOString().slice(0, 10)}>{formatDate(post.date, lang)}</time>
+      </p>
+      <h1>{post.title}</h1>
+      <p class="summary">{post.summary}</p>
+      {post.category === 'invest' && <p class="notice">{t.disclaimer}</p>}
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {
+      post.tags.length > 0 && (
+        <ul class="tag-list" aria-label={t.tags}>
+          {post.tags.map((tag) => (
+            <li>
+              <a href={href(lang, `tags/${tag}/`)}>{tag}</a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+    <Comments lang={lang} />
+  </article>
+</Base>

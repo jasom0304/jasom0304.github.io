@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import { ui, type Lang } from '../site';
+import { getPosts } from '../lib/posts';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+const posts = await getPosts(lang);
+---
+
+<Base lang={lang}>
+  <div class="home-top">
+    <p class="home-intro">{t.intro.join('')}</p>
+    <svg class="home-road" viewBox="0 0 320 110" aria-hidden="true">
+      <path
+        class="road-line"
+        d="M6 92 C 50 92, 58 46, 100 50 S 150 96, 196 74 S 236 20, 284 24"
+        fill="none"
+      ></path>
+      <circle class="road-stop" cx="6" cy="92" r="4"></circle>
+      <circle class="road-stop" cx="100" cy="50" r="4"></circle>
+      <circle class="road-stop" cx="196" cy="74" r="4"></circle>
+      <g transform="rotate(-4 296 22)">
+        <rect class="road-seal" x="282" y="8" width="28" height="28" rx="3"></rect>
+        <text class="road-seal-text" x="296" y="29" text-anchor="middle">吉</text>
+      </g>
+    </svg>
+  </div>
+  <section class="section">
+    <h1 class="section-title home-title">{t.latest}</h1>
+    <PostList posts={posts.slice(0, 2)} lang={lang} showCategory />
+  </section>
+</Base>

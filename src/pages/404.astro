@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import { ui } from '../site';
+import { href } from '../lib/url';
+const t = ui.zh;
+---
+
+<Base lang="zh" title={t.notFound}>
+  <header class="page-head">
+    <h1>{t.notFound}</h1>
+    <p>{t.notFoundBody}</p>
+    <p><a href={href('zh')}>{t.home}</a></p>
+  </header>
+</Base>

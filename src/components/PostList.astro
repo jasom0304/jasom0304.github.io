@@ -1,0 +1,42 @@
+---
+import { categories, ui, type Lang } from '../site';
+import { href, formatDate } from '../lib/url';
+import type { Post } from '../lib/posts';
+
+interface Props {
+  posts: Post[];
+  lang: Lang;
+  showCategory?: boolean;
+}
+
+const { posts, lang, showCategory = false } = Astro.props;
+const t = ui[lang];
+const catName = (id: string) => categories.find((c) => c.id === id)?.[lang].name ?? id;
+---
+
+{
+  posts.length === 0 ? (
+    <p class="empty">{t.empty}</p>
+  ) : (
+    <ul class="post-list">
+      {posts.map((p) => (
+        <li>
+          <div class="meta">
+            <time datetime={p.date.toISOString().slice(0, 10)}>{formatDate(p.date, lang)}</time>
+            {showCategory && (
+              <a class="cat" href={href(lang, `${p.category}/`)}>
+                {catName(p.category)}
+              </a>
+            )}
+          </div>
+          <div>
+            <h3>
+              <a href={href(lang, `${p.category}/${p.slug}/`)}>{p.title}</a>
+            </h3>
+            <p>{p.summary}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  )
+}
