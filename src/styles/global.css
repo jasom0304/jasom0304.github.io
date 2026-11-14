@@ -424,6 +424,7 @@ html[lang='en'] .seal {
   color: var(--indigo);
 }
 .post-list p {
+  white-space: pre-line;
   margin: 0.25rem 0 0;
   color: var(--ink-soft);
   font-size: 0.95rem;
