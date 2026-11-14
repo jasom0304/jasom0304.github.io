@@ -32,9 +32,9 @@ export const categories = [
     en: { name: 'Investing', desc: 'Ideas and lessons from learning to invest.' },
   },
   {
-    id: 'research',
-    zh: { name: '研究主題', desc: '研究所在做什麼，用白話講。' },
-    en: { name: 'Research', desc: 'What I work on in grad school, in plain words.' },
+    id: 'study',
+    zh: { name: '升學', desc: '準備升學路上的紀錄。' },
+    en: { name: 'Further study', desc: 'Notes from preparing for further study.' },
   },
 ];
 
@@ -42,7 +42,7 @@ export const ui = {
   zh: {
     siteName: "小吉's Notes",
     author: '小吉',
-    description: '小吉的筆記：交換學生、活動經歷、投資、研究主題。',
+    description: '小吉的筆記：交換學生、活動經歷、投資、升學。',
     heroLines: ['走過的路，', '慢慢寫下來。'],
     intro: [
       '我是小吉。',
@@ -73,7 +73,7 @@ export const ui = {
   en: {
     siteName: "Jason's Notes",
     author: 'Jason',
-    description: "Jason's notes on exchange study, events, investing, and research.",
+    description: "Jason's notes on exchange study, events, investing, and further study.",
     heroLines: ['Roads taken,', 'written down slowly.'],
     intro: [
       "I'm Jason. ",
