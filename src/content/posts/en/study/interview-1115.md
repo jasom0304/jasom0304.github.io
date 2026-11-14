@@ -8,19 +8,17 @@ summary: The result is not what matters most. The process matters more.
 
 I was lucky to get an interview for the master's program in Electronic Engineering (Group A) at Taiwan Tech. Preparing for it taught me a lot.
 
-When my dad heard about the interview, he started helping me prepare right away. He has helped me with many things since I was little, like reading-aloud and speech contests.
-
-We did three online practice runs before the interview. They helped a lot.
+When my dad heard about the interview, he started helping me prepare right away. He has helped me with many things since I was little, like reading-aloud and speech contests. We did three online practice runs before the interview, and they helped a lot.
 
 ![Practicing the interview online with my dad](../../zh/study/practice-1115.png)
 
 At first, my answers had no structure. I said whatever came to mind, so my answers were vague and drifted off topic. That is what I worked on.
 
-Later, my answers followed the same structure: motivation, process, and what I gained. This was my main way to answer, and it worked well. Since the interview was short, I cut it down to just process and what I gained. It was much better than my first practice, and it was also a good review of what I did in college. Thanks again to my dad for all his help.
+Later, my answers followed the same structure: motivation, process, and what I gained. This was my main way to answer, and it worked well. Since the interview was short, I later cut it down to just process and what I gained.
 
-The interview had two parts. The first was questions. The second was a C programming test on a computer.
+It was much better than my first practice, and it was also a good review of what I did in college. Thanks again to my dad for all his help.
 
-I was quite nervous, but luckily I ran into someone from Taipei Tech, which took off a lot of pressure.
+The interview had two parts. The first was questions. The second was a C programming test on a computer. I was quite nervous, but luckily I ran into someone from Taipei Tech, which took off a lot of pressure.
 
 Questions in the first part:
 
@@ -37,4 +35,6 @@ Questions in the second part:
 1. Find the smallest value in an array
 2. Convert a number to binary and count how many 0s it has
 
-After the interview I was quite confused, because they asked nothing about my field or my project. I could not tell if that was very good or very bad. I hope it was good. Afterward I had a pork cutlet rice bowl with bot6. It was pretty good.
+After the interview I was quite confused, because they asked nothing about my field or my project. I could not tell if that was very good or very bad. I hope it was good.
+
+Afterward I had a pork cutlet rice bowl with bot6. It was pretty good.
