@@ -487,6 +487,7 @@ html[lang='en'] .seal {
   font-size: clamp(1.9rem, 5vw, 2.7rem);
 }
 .article-head .summary {
+  white-space: pre-line;
   margin: 1rem 0 0;
   color: var(--ink-soft);
   font-size: 1.05rem;

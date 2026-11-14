@@ -1,7 +1,9 @@
 ---
 title: Notes on holding a position
 date: 2026-11-15
-summary: Respect the market. Investing is a long game. Small capital is no reason to use leverage, and position sizing comes first.
+summary: |-
+  Respect the market. Investing is a long game.
+  Small capital is no reason to use leverage, and position sizing comes first.
 ---
 
 ![Fear and Greed Index at 12, extreme fear](../../zh/invest/fear-greed-1115.png)
