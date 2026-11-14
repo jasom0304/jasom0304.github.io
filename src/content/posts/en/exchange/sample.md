@@ -2,10 +2,9 @@
 title: 'Sample: a first exchange post'
 date: 2026-11-12
 summary: This is a sample post. Replace it with your own exchange story.
-tags: [sample, exchange]
 ---
 
-This is a sample post. The part between the two lines of dashes above holds the post details: title, date, summary, and tags. The text starts below them.
+This is a sample post. The part between the two lines of dashes above holds the post details: title, date, and summary. The text starts below them.
 
 ## What to write
 

@@ -9,7 +9,6 @@ export interface Post {
   title: string;
   date: Date;
   summary: string;
-  tags: string[];
 }
 
 // 檔案路徑決定語言和分類：posts/zh/exchange/my-post.md → zh、exchange、my-post
@@ -26,7 +25,6 @@ export async function getAllPosts(): Promise<Post[]> {
         title: entry.data.title,
         date: entry.data.date,
         summary: entry.data.summary,
-        tags: entry.data.tags,
       };
     })
     .filter((p) => p.slug)

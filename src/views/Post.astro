@@ -42,18 +42,6 @@ const hasAlt = (await getAllPosts()).some(
       <Content />
     </div>
 
-    {
-      post.tags.length > 0 && (
-        <ul class="tag-list" aria-label={t.tags}>
-          {post.tags.map((tag) => (
-            <li>
-              <a href={href(lang, `tags/${tag}/`)}>{tag}</a>
-            </li>
-          ))}
-        </ul>
-      )
-    }
-
     <Comments lang={lang} />
   </article>
 </Base>

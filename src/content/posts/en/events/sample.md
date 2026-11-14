@@ -2,7 +2,6 @@
 title: 'Sample: notes from an event'
 date: 2026-11-08
 summary: This is a sample post. Write about an event, contest, or club you joined.
-tags: [sample, events]
 ---
 
 This is a sample post. Replace it with your own.

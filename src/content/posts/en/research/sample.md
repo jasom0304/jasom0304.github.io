@@ -2,7 +2,6 @@
 title: 'Sample: my research topic in plain words'
 date: 2026-11-01
 summary: This is a sample post. Try to make it clear to a friend outside the field.
-tags: [sample, research]
 ---
 
 This is a sample post. Replace it with your own.
