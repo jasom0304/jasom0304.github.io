@@ -19,6 +19,8 @@ const t = ui[lang];
 const other: Lang = lang === 'zh' ? 'en' : 'zh';
 const pageTitle = title ? `${title}｜${t.siteName}` : t.siteName;
 const year = new Date().getFullYear();
+// 這一頁的正式網址，給搜尋引擎看。
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <!doctype html>
@@ -31,7 +33,12 @@ const year = new Date().getFullYear();
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description ?? t.description} />
     <link rel="icon" type="image/svg+xml" href={asset('favicon.svg')} />
-    <link rel="alternate" hreflang={other === 'zh' ? 'zh-Hant' : 'en'} href={href(other, hasAlt ? path : '')} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <link rel="sitemap" href={asset('sitemap-index.xml')} />
+    <link rel="alternate" hreflang={lang === 'zh' ? 'zh-Hant' : 'en'} href={canonical} />
+    {hasAlt && <link rel="alternate" hreflang={other === 'zh' ? 'zh-Hant' : 'en'} href={new URL(href(other, path), Astro.site).href} />}
     <script is:inline>
       (function () {
         try {
