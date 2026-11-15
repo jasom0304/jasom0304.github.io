@@ -36,13 +36,18 @@ export const categories = [
     zh: { name: '升學', desc: '準備升學路上的紀錄。' },
     en: { name: 'Further study', desc: 'Notes from preparing for further study.' },
   },
+  {
+    id: 'life',
+    zh: { name: '生活', desc: '日常生活的小事。' },
+    en: { name: 'Life', desc: 'Small things from everyday life.' },
+  },
 ];
 
 export const ui = {
   zh: {
     siteName: "小吉's Notes",
     author: '小吉',
-    description: '小吉的筆記：交換學生、活動經歷、投資、升學。',
+    description: '小吉的筆記：交換學生、活動經歷、投資、升學、生活。',
     heroLines: ['走過的路，', '慢慢寫下來。'],
     intro: [
       '我是小吉。',
@@ -73,7 +78,7 @@ export const ui = {
   en: {
     siteName: "Jason's Notes",
     author: 'Jason',
-    description: "Jason's notes on exchange study, events, investing, and further study.",
+    description: "Jason's notes on exchange study, events, investing, further study, and life.",
     heroLines: ['Roads taken,', 'written down slowly.'],
     intro: [
       "I'm Jason. ",
