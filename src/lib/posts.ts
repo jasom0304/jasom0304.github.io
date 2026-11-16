@@ -41,19 +41,20 @@ function getUploadTimes(): Map<string, number> {
   return uploadTimes;
 }
 
-// 檔案路徑決定語言和分類：posts/zh/exchange/my-post.md → zh、exchange、my-post
+// 檔案路徑決定語言和網址：posts/zh/my-post.md → zh、my-post。分類寫在文章開頭的 category。
 export async function getAllPosts(): Promise<Post[]> {
   const all = await getCollection('posts', (e) => !e.data.draft);
   const times = getUploadTimes();
   return all
     .map((entry) => {
-      const [lang, category, ...rest] = entry.id.split('/');
-      const file = `src/content/posts/${entry.id}.md`;
+      const lang = entry.id.split('/')[0];
+      const file = (entry.filePath ?? '').replace(/\\/g, '/').replace(/^\.\//, '');
+      const slug = file.split('/').pop()!.replace(/\.md$/, '');
       return {
         entry,
         lang: lang as Lang,
-        category,
-        slug: rest.join('-'),
+        category: entry.data.category,
+        slug,
         title: entry.data.title,
         date: entry.data.date,
         summary: entry.data.summary,

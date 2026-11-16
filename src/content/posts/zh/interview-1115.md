@@ -1,6 +1,7 @@
 ---
 title: 推甄心得
 date: 2026-11-15
+category: growth
 summary: 結果不是最重要的，更重要的是過程。
 ---
 

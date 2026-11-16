@@ -1,6 +1,7 @@
 ---
 title: 範例：交換學生的第一篇
 date: 2026-11-12
+category: exchange
 summary: 這是一篇示範文章。把內容換成你自己的交換故事就好。
 ---
 

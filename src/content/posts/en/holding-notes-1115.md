@@ -1,16 +1,17 @@
 ---
 title: Notes on holding a position
 date: 2026-11-15
+category: invest
 summary: |-
   Respect the market. Investing is a long game.
   Small capital is no reason to use leverage, and position sizing comes first.
 ---
 
-![Fear and Greed Index at 12, extreme fear](../../zh/invest/fear-greed-1115.png)
+![Fear and Greed Index at 12, extreme fear](../zh/fear-greed-1115.png)
 
 Market sentiment has dropped to a recent low today. Prices keep sliding day after day. The panic never arrives as fast as it does with a sudden wick down, so it feels like being a frog in slowly heating water.
 
-![Bitcoin daily chart, price down to 65,632](../../zh/invest/btc-daily-1115.png)
+![Bitcoin daily chart, price down to 65,632](../zh/btc-daily-1115.png)
 
 This is the current Bitcoin price chart. Just when everyone believes the bull market is here, the big players make their move. In a market this speculative, what they do is shake retail traders out of their positions again and again. The exchanges make money, and the big players get to pick up coins sold at a loss.
 

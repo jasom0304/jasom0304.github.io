@@ -1,6 +1,7 @@
 ---
 title: 'Sample: a first exchange post'
 date: 2026-11-12
+category: exchange
 summary: This is a sample post. Replace it with your own exchange story.
 ---
 

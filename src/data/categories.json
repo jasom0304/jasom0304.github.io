@@ -1,0 +1,59 @@
+{
+  "categories": [
+    {
+      "id": "learning",
+      "zh": {
+        "name": "學習心得",
+        "desc": "學東西時的心得和筆記。"
+      },
+      "en": {
+        "name": "Learning",
+        "desc": "Notes and thoughts from learning things."
+      }
+    },
+    {
+      "id": "growth",
+      "zh": {
+        "name": "成長歷程",
+        "desc": "一路走來的經歷，像是升學。"
+      },
+      "en": {
+        "name": "Growing up",
+        "desc": "Milestones along the way, like further study."
+      }
+    },
+    {
+      "id": "exchange",
+      "zh": {
+        "name": "交換學生",
+        "desc": "在國外念書和生活的紀錄。"
+      },
+      "en": {
+        "name": "Exchange",
+        "desc": "Studying and living abroad."
+      }
+    },
+    {
+      "id": "invest",
+      "zh": {
+        "name": "投資",
+        "desc": "學投資時讀到的觀念和教訓。"
+      },
+      "en": {
+        "name": "Investing",
+        "desc": "Ideas and lessons from learning to invest."
+      }
+    },
+    {
+      "id": "life",
+      "zh": {
+        "name": "生活",
+        "desc": "日常生活的小事。"
+      },
+      "en": {
+        "name": "Life",
+        "desc": "Small things from everyday life."
+      }
+    }
+  ]
+}

@@ -14,34 +14,24 @@ export const site = {
   },
 };
 
-// 分類。要新增一類：在這裡加一筆，再到 src/content/posts/zh 和 en 底下開同名資料夾。
-export const categories = [
-  {
-    id: 'learning',
-    zh: { name: '學習心得', desc: '學東西時的心得和筆記。' },
-    en: { name: 'Learning', desc: 'Notes and thoughts from learning things.' },
-  },
-  {
-    id: 'growth',
-    zh: { name: '成長歷程', desc: '一路走來的經歷，像是升學。' },
-    en: { name: 'Growing up', desc: 'Milestones along the way, like further study.' },
-  },
-  {
-    id: 'exchange',
-    zh: { name: '交換學生', desc: '在國外念書和生活的紀錄。' },
-    en: { name: 'Exchange', desc: 'Studying and living abroad.' },
-  },
-  {
-    id: 'invest',
-    zh: { name: '投資', desc: '學投資時讀到的觀念和教訓。' },
-    en: { name: 'Investing', desc: 'Ideas and lessons from learning to invest.' },
-  },
-  {
-    id: 'life',
-    zh: { name: '生活', desc: '日常生活的小事。' },
-    en: { name: 'Life', desc: 'Small things from everyday life.' },
-  },
-];
+// 分類在 src/data/categories.json，可以在網站後台（/admin）新增、改名、調整順序。
+// 英文名稱留空時，英文版先顯示中文名稱。
+import categoryData from './data/categories.json';
+
+interface CategoryText {
+  name: string;
+  desc?: string;
+}
+export interface Category {
+  id: string;
+  zh: CategoryText;
+  en: CategoryText;
+}
+export const categories: Category[] = categoryData.categories.map((c: any) => ({
+  id: c.id,
+  zh: { name: c.zh?.name ?? c.id, desc: c.zh?.desc ?? '' },
+  en: { name: c.en?.name || c.zh?.name || c.id, desc: c.en?.desc || c.zh?.desc || '' },
+}));
 
 export const ui = {
   zh: {

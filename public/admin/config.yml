@@ -1,0 +1,107 @@
+# 網站後台設定（Sveltia CMS）
+backend:
+  name: github
+  repo: jasom0304/jasom0304.github.io
+  branch: main
+  base_url: https://sveltia-cms-auth.jasom0304.workers.dev
+  commit_messages:
+    create: '新增文章：{{slug}}'
+    update: '修改：{{slug}}'
+    delete: '刪除：{{slug}}'
+    uploadMedia: '上傳圖片：{{path}}'
+    deleteMedia: '刪除圖片：{{path}}'
+
+site_url: https://jasom0304.github.io
+display_url: https://jasom0304.github.io
+locale: zh_Hant
+
+# 圖片放在文章旁邊，上傳時自動縮小並轉成 WebP。
+media_folder: src/content/posts/zh
+public_folder: .
+media_libraries:
+  default:
+    config:
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 2000
+          height: 2000
+
+collections:
+  - name: posts
+    label: 文章
+    label_singular: 文章
+    folder: src/content/posts/zh
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{title}}'
+    media_folder: ''
+    public_folder: '.'
+    summary: '{{title}}（{{date}}）{{draft}}'
+    sortable_fields: [date, title]
+    view_filters:
+      - label: 草稿
+        field: draft
+        pattern: true
+    fields:
+      - { name: title, label: 標題, widget: string }
+      - name: date
+        label: 日期
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        format: YYYY-MM-DD
+        default: '{{now}}'
+      - name: category
+        label: 分類
+        widget: relation
+        collection: settings
+        file: categories
+        value_field: 'categories.*.id'
+        display_fields: ['categories.*.zh.name']
+        search_fields: ['categories.*.zh.name']
+      - name: summary
+        label: 摘要
+        widget: text
+        required: false
+        hint: 顯示在文章列表上。可以換行。
+      - name: draft
+        label: 草稿（勾著就不公開）
+        widget: boolean
+        default: true
+      - { name: body, label: 內文, widget: markdown }
+
+  - name: settings
+    label: 設定
+    files:
+      - name: categories
+        label: 分類
+        file: src/data/categories.json
+        format: json
+        fields:
+          - name: categories
+            label: 分類（拖曳可以調整順序）
+            label_singular: 分類
+            widget: list
+            summary: '{{fields.zh.name}}'
+            fields:
+              - name: id
+                label: 網址名稱
+                widget: string
+                pattern: ['^[a-z0-9-]+$', '只能用英文小寫、數字和連字號']
+                hint: 會變成網址，例如 life → jasom0304.github.io/life/。建立後不要改，不然舊文章會找不到分類。
+              - name: zh
+                label: 中文
+                widget: object
+                fields:
+                  - { name: name, label: 名稱, widget: string }
+                  - { name: desc, label: 說明, widget: string, required: false }
+              - name: en
+                label: 英文（可留空，之後找 Claude 補）
+                widget: object
+                required: false
+                fields:
+                  - { name: name, label: 名稱, widget: string, required: false }
+                  - { name: desc, label: 說明, widget: string, required: false }
