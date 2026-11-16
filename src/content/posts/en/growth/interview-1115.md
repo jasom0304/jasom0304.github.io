@@ -4,13 +4,13 @@ date: 2026-11-15
 summary: The result is not what matters most. The process matters more.
 ---
 
-![The name wall at the Taiwan Tech entrance](../../zh/study/taiwan-tech-1115.webp)
+![The name wall at the Taiwan Tech entrance](../../zh/growth/taiwan-tech-1115.webp)
 
 I was lucky to get an interview for the master's program in Electronic Engineering (Group A) at Taiwan Tech. Preparing for it taught me a lot.
 
 When my dad heard about the interview, he started helping me prepare right away. He has helped me with many things since I was little, like reading-aloud and speech contests. We did three online practice runs before the interview, and they helped a lot.
 
-![Practicing the interview online with my dad](../../zh/study/practice-1115.png)
+![Practicing the interview online with my dad](../../zh/growth/practice-1115.png)
 
 At first, my answers had no structure. I said whatever came to mind, so my answers were vague and drifted off topic. That is what I worked on.
 

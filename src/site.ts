@@ -17,24 +17,24 @@ export const site = {
 // 分類。要新增一類：在這裡加一筆，再到 src/content/posts/zh 和 en 底下開同名資料夾。
 export const categories = [
   {
+    id: 'learning',
+    zh: { name: '學習心得', desc: '學東西時的心得和筆記。' },
+    en: { name: 'Learning', desc: 'Notes and thoughts from learning things.' },
+  },
+  {
+    id: 'growth',
+    zh: { name: '成長歷程', desc: '一路走來的經歷，像是升學。' },
+    en: { name: 'Growing up', desc: 'Milestones along the way, like further study.' },
+  },
+  {
     id: 'exchange',
     zh: { name: '交換學生', desc: '在國外念書和生活的紀錄。' },
     en: { name: 'Exchange', desc: 'Studying and living abroad.' },
   },
   {
-    id: 'events',
-    zh: { name: '活動經歷', desc: '參加過的活動、比賽和社團。' },
-    en: { name: 'Events', desc: 'Activities, contests, and clubs I joined.' },
-  },
-  {
     id: 'invest',
     zh: { name: '投資', desc: '學投資時讀到的觀念和教訓。' },
     en: { name: 'Investing', desc: 'Ideas and lessons from learning to invest.' },
-  },
-  {
-    id: 'study',
-    zh: { name: '升學', desc: '準備升學路上的紀錄。' },
-    en: { name: 'Further study', desc: 'Notes from preparing for further study.' },
   },
   {
     id: 'life',
@@ -47,7 +47,7 @@ export const ui = {
   zh: {
     siteName: "小吉's Notes",
     author: '小吉',
-    description: '小吉的筆記：交換學生、活動經歷、投資、升學、生活。',
+    description: '小吉的筆記：學習心得、成長歷程、交換學生、投資、生活。',
     heroLines: ['走過的路，', '慢慢寫下來。'],
     intro: [
       '我是小吉。',
@@ -78,7 +78,7 @@ export const ui = {
   en: {
     siteName: "Jason's Notes",
     author: 'Jason',
-    description: "Jason's notes on exchange study, events, investing, further study, and life.",
+    description: "Jason's notes on learning, growing up, exchange study, investing, and life.",
     heroLines: ['Roads taken,', 'written down slowly.'],
     intro: [
       "I'm Jason. ",
