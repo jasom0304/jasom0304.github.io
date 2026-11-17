@@ -629,3 +629,13 @@ html[lang='en'] .seal {
 .site-footer p {
   margin: 0;
 }
+
+/* 文章裡多按的空行，每一行留一行的高度 */
+.prose > .blank-line {
+  margin: 0;
+  height: 1.9em;
+}
+/* 段落裡按一次 Enter 就換行 */
+.prose p {
+  white-space: pre-line;
+}
